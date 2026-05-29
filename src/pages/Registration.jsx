@@ -32,7 +32,7 @@ export default function Registration() {
         <button type="submit">Register</button>
       </Form>
       <Border />
-      <div className="flex gap-xs">
+      <div className="flex gap-xs redirection">
         <p className="label">Already have an account?</p>
         <Link to={"/login"} className="primary-link">
           Login

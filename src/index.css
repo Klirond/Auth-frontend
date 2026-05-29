@@ -24,7 +24,7 @@
 }
 
 * {
-    @apply font-jost text-md box-border outline-none;
+    @apply text-md box-border outline-none;
 }
 *:focus {
     outline: none;

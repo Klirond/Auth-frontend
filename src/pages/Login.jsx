@@ -23,9 +23,9 @@ export default function Login() {
         <button type="submit">Login</button>
       </Form>
       <Border />
-      <div className="flex gap-xs">
+      <div className="flex gap-xs redirection">
         <p className="label">New to Zetavex?</p>
-        <Link to={"/login"} className="primary-link">
+        <Link to={"/register"} className="primary-link">
           Create an account
         </Link>
       </div>
