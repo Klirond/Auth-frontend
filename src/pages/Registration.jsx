@@ -13,21 +13,21 @@ export default function Registration() {
       <Form method="post" className="form">
         <div>
           <p className="label">Username</p>
-          <input placeholder="username" name="username" />
+          <input type="text" placeholder="username" name="username" />
         </div>
         <div>
           <p className="label">Email</p>
-          <input placeholder="example@domain.com" name="email" />
+          <input type="email" placeholder="example@domain.com" name="email" />
         </div>
         <div>
           <p className="label">Password</p>
-          <input placeholder="password" name="password" />
+          <input type="password" placeholder="password" name="password" />
         </div>
         <div>
           <p className="label">Confirm password</p>
-          <input placeholder="password" />
+          <input type="password" placeholder="password" />
         </div>
-        <button>Button</button>
+        <button type="submit">Register</button>
       </Form>
     </>
   );
