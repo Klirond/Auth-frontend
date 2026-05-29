@@ -1,6 +1,7 @@
 import { Form } from "react-router";
 import Border from "../components/Border";
 import TopSection from "../components/TopSection";
+import { Link } from "react-router";
 
 export default function Registration() {
   return (
@@ -29,6 +30,13 @@ export default function Registration() {
         </div>
         <button type="submit">Register</button>
       </Form>
+      <Border />
+      <div className="flex gap-xs">
+        <p className="label">Already have an account?</p>
+        <Link to={"/login"} className="primary-link">
+          Login
+        </Link>
+      </div>
     </>
   );
 }

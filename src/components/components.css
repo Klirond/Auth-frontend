@@ -2,7 +2,7 @@
 @import "../index.css";
 
 footer {
-    @apply flex items-center justify-between py-xs fixed bottom-2 right-0 left-0 px-md md:px-xl;
+    @apply bg-midnight-black flex items-center justify-between;
 }
 footer .copyright-section {
     @apply flex items-center gap-0.5;
@@ -17,8 +17,15 @@ footer .footer-links-section {
     @apply flex h-fit gap-md;
 }
 
+.primary-link,
 .secondary-link {
-    @apply text-sm md:text-md text-secondary;
+    @apply text-sm md:text-md underline underline-offset-2;
+}
+.secondary-link {
+    @apply text-secondary;
+}
+.primary-link {
+    @apply text-white;
 }
 
 .full-logo-svg {

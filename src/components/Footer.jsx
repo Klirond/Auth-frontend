@@ -1,5 +1,5 @@
+import { Link } from "react-router";
 import "./components.css";
-import SecondaryLink from "./SecondaryLink";
 
 export default function Footer() {
   return (
@@ -9,8 +9,12 @@ export default function Footer() {
         <p>© 2026 | All rights reserved.</p>
       </div>
       <div className="footer-links-section">
-        <SecondaryLink value={"Legal"} to={"/"} />
-        <SecondaryLink value={"Support"} to={"/"} />
+        <Link to={""} className="secondary-link">
+          Legal
+        </Link>
+        <Link to={""} className="secondary-link">
+          Support
+        </Link>
       </div>
     </footer>
   );
