@@ -2,21 +2,35 @@
 @import "../index.css";
 
 footer {
-    @apply flex items-center justify-between py-2 fixed bottom-2 right-0 left-0 px-4 lg:px-8;
+    @apply flex items-center justify-between py-xs fixed bottom-2 right-0 left-0 px-md md:px-xl;
 }
 footer .copyright-section {
     @apply flex items-center gap-0.5;
 }
 footer .copyright-section h2 {
-    @apply text-md lg:text-lg text-white font-bold font-logo;
+    @apply text-md md:text-lg text-white font-bold font-logo;
 }
 footer .copyright-section p {
-    @apply text-sm lg:text-md;
+    @apply text-sm md:text-md;
 }
 footer .footer-links-section {
-    @apply flex h-fit gap-4;
+    @apply flex h-fit gap-md;
 }
 
 .secondary-link {
-    @apply text-sm lg:text-md text-secondary;
+    @apply text-sm md:text-md text-secondary;
+}
+
+.full-logo-svg {
+    @apply max-w-[90%] md:max-w-[30%];
+}
+
+.top-section {
+    @apply py-xl flex flex-col gap-xl;
+}
+.top-section div {
+    @apply flex flex-col gap-2;
+}
+.top-section div h2 {
+    @apply text-xl font-bold font-logo;
 }
