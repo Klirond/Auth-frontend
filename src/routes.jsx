@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import Root from "./layouts/Root";
+import Registration from "./pages/Registration";
 
 let router = createBrowserRouter([
   {
@@ -7,7 +8,7 @@ let router = createBrowserRouter([
     children: [
       {
         path: "register",
-        Component: () => <p>Hello this is registration</p>,
+        Component: Registration,
       },
     ],
   },
