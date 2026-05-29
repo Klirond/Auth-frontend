@@ -26,7 +26,7 @@ footer .footer-links-section {
 }
 
 .top-section {
-    @apply py-xl flex flex-col gap-xl;
+    @apply flex flex-col gap-xl;
 }
 .top-section div {
     @apply flex flex-col gap-2;
@@ -41,4 +41,15 @@ footer .footer-links-section {
 
 .label {
     @apply text-sm text-secondary;
+}
+
+input {
+    @apply bg-transparent border-2 border-secondary w-full rounded-lg px-sm py-xs;
+}
+
+form {
+    @apply flex flex-col gap-md;
+}
+form div {
+    @apply flex flex-col gap-xs;
 }

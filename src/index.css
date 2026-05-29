@@ -24,5 +24,13 @@
 }
 
 * {
-    @apply font-jost text-md box-border;
+    @apply font-jost text-md box-border outline-none;
+}
+*:focus {
+    outline: none;
+}
+
+::selection,
+::-moz-selection {
+    @apply bg-main text-midnight-black outline-none;
 }

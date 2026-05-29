@@ -2,5 +2,5 @@
 @import "../index.css";
 
 #root-layout {
-    @apply px-md py-lg lg:p-xl w-screen h-fit min-h-screen bg-midnight-black text-white;
+    @apply flex flex-col gap-xl px-md py-lg lg:p-xl w-screen h-fit min-h-screen bg-midnight-black text-white;
 }
