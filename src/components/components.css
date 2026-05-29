@@ -2,7 +2,7 @@
 @import "../index.css";
 
 footer {
-    @apply bg-midnight-black flex items-center justify-between;
+    @apply bg-midnight-black flex items-center justify-between mt-auto;
 }
 footer .copyright-section {
     @apply flex items-center gap-0.5;
