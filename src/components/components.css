@@ -38,3 +38,7 @@ footer .footer-links-section {
 .border-separator {
     @apply w-full h-px bg-secondary;
 }
+
+.label {
+    @apply text-sm text-secondary;
+}
