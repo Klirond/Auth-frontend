@@ -34,3 +34,7 @@ footer .footer-links-section {
 .top-section div h2 {
     @apply text-xl font-bold font-logo;
 }
+
+.border-separator {
+    @apply w-full h-px bg-secondary;
+}
