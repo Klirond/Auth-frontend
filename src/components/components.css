@@ -2,7 +2,7 @@
 @import "../index.css";
 
 footer {
-    @apply bg-midnight-black flex items-center justify-between mt-auto;
+    @apply bg-midnight-black flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:left-0 md:px-xl md:py-lg md:w-1/2;
 }
 footer .copyright-section {
     @apply flex items-center gap-0.5;
@@ -64,4 +64,15 @@ form div {
 button,
 .button {
     @apply font-logo font-medium text-white text-md bg-main px-sm py-xs border-none rounded-lg w-fit;
+}
+
+.desktop-frame {
+    @apply hidden invisible md:block md:visible bg-main h-screen w-1/2 absolute top-0 right-0;
+}
+
+.main-section {
+    @apply flex flex-col gap-xl p-xl pl-0 w-1/2;
+}
+.main-section > form {
+    @apply px-xl;
 }
