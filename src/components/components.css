@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "../index.css";
+
+footer {
+    @apply flex items-center justify-between py-2 fixed bottom-2 right-0 left-0 px-4 lg:px-8;
+}
+footer .copyright-section {
+    @apply flex items-center gap-0.5;
+}
+footer .copyright-section h2 {
+    @apply text-md lg:text-lg text-white font-bold font-logo;
+}
+footer .copyright-section p {
+    @apply text-sm lg:text-md;
+}
+footer .footer-links-section {
+    @apply flex h-fit gap-4;
+}
+
+.secondary-link {
+    @apply text-sm lg:text-md text-secondary;
+}
