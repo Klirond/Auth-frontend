@@ -1,11 +1,5 @@
 @import "tailwindcss";
-
-@theme {
-    --color-midnight-black: #0b0b0b;
-    --color-main: #73c630;
-    --color-secondary: #696969;
-    --font-logo: "Space Grotesk", sans-serif;
-}
+@import "../index.css";
 
 #root-layout {
     @apply px-4 py-6 w-screen h-fit min-h-screen bg-midnight-black text-white;

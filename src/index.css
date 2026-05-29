@@ -1,3 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 @import "tailwindcss";
+
+@theme {
+    --color-midnight-black: #0b0b0b;
+    --color-main: #73c630;
+    --color-secondary: #696969;
+
+    --font-logo: "Space Grotesk", sans-serif;
+    --font-jost: "Jost", sans-serif;
+
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    --text-xs: 8px;
+    --text-sm: 12px;
+    --text-md: 16px;
+    --text-lg: 24px;
+    --text-xl: 32px;
+}
+
+* {
+    @apply font-jost text-md;
+}
