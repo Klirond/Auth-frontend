@@ -48,8 +48,13 @@ input {
 }
 
 form {
-    @apply flex flex-col gap-md;
+    @apply flex flex-col gap-md items-center w-full;
 }
 form div {
-    @apply flex flex-col gap-xs;
+    @apply flex flex-col gap-xs w-full;
+}
+
+button,
+.button {
+    @apply font-logo font-medium text-white text-md bg-main px-sm py-xs border-none rounded-lg w-fit;
 }

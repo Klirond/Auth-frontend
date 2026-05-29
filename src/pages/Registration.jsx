@@ -27,6 +27,7 @@ export default function Registration() {
           <p className="label">Confirm password</p>
           <input placeholder="password" />
         </div>
+        <button>Button</button>
       </Form>
     </>
   );
