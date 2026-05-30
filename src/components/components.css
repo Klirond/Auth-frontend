@@ -74,6 +74,6 @@
     }
 
     .redirection {
-        @apply flex gap-xs justify-start items-center w-full;
+        @apply flex flex-row gap-xs justify-start items-center w-full;
     }
 }

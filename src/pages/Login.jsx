@@ -20,6 +20,12 @@ export default function Login() {
           <p className="label">Password</p>
           <input type="password" placeholder="password" name="password" />
         </div>
+        <div className="redirection">
+          <p className="label">Forgot your login password?</p>
+          <Link to={"/forgot-password"} className="primary-link">
+            Reset password
+          </Link>
+        </div>
         <button type="submit">Login</button>
       </Form>
       <Border />
