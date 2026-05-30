@@ -76,4 +76,8 @@
     .redirection {
         @apply flex flex-row gap-xs justify-start items-center w-full;
     }
+
+    .error-msg {
+        @apply text-md text-red-500 font-normal font-jost;
+    }
 }

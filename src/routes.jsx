@@ -7,6 +7,7 @@ import SentVerificationLink from "./pages/SentVerificationLink";
 import SentResetLink from "./pages/SentResetLink";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmationPage from "./pages/Confirmation";
+import registration from "./actions/registration";
 
 let router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ let router = createBrowserRouter([
     children: [
       {
         path: "register",
+        action: registration,
         Component: Registration,
       },
       {
