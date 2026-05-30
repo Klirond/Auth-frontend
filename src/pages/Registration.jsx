@@ -4,7 +4,7 @@ import TopSection from "../components/TopSection";
 import { Link } from "react-router";
 
 export default function Registration() {
-  const registrationScreen = (
+  return (
     <>
       <TopSection
         title={"Welcome"}
@@ -37,16 +37,6 @@ export default function Registration() {
           Login
         </Link>
       </div>
-    </>
-  );
-
-  return (
-    <>
-      {window.innerWidth >= 768 ? (
-        <div className="desktop-section">{registrationScreen}</div>
-      ) : (
-        <>{registrationScreen}</>
-      )}
     </>
   );
 }

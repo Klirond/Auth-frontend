@@ -6,7 +6,11 @@ import { Outlet } from "react-router";
 function Root() {
   return (
     <main id="root-layout">
-      <Outlet />
+      {window.innerWidth >= 768 ? (
+        <div className="desktop-section">{<Outlet />}</div>
+      ) : (
+        <Outlet />
+      )}
       <Footer />
     </main>
   );
