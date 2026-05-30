@@ -72,10 +72,6 @@
     .desktop-frame {
         @apply text-midnight-black hidden invisible md:flex justify-center items-center flex-col gap-xl md:visible bg-main h-screen w-1/2 absolute top-0;
     }
-    .desktop-frame:-moz-selection,
-    .desktop-frame:selection {
-        @apply bg-midnight-black text-main;
-    }
     .desktop-frame div {
         @apply text-center w-full;
     }

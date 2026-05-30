@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export default function SecondaryDesktopFrame({ side }) {
   return (
     <section className={"desktop-frame " + side}>
@@ -5,7 +7,12 @@ export default function SecondaryDesktopFrame({ side }) {
         <h1>Already have an account?</h1>
         <p>Quickly login to continue your journey.</p>
       </div>
-      <button className="second-frame-button">Login</button>
+      <NavLink
+        to={location.pathname === "/login" ? "/register" : "/login"}
+        className="button second-frame-button"
+      >
+        {side === "right" ? "Login" : "Register"}
+      </NavLink>
     </section>
   );
 }
