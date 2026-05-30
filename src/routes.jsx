@@ -4,6 +4,7 @@ import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import ForgotPasswd from "./pages/ForgotPassword";
 import SentVerificationLink from "./pages/SentVerificationLink";
+import SentResetLink from "./pages/SentResetLink";
 
 let router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ let router = createBrowserRouter([
       {
         path: "verification-sent",
         Component: SentVerificationLink,
+      },
+      {
+        path: "reset-sent",
+        Component: SentResetLink,
       },
     ],
   },
