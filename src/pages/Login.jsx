@@ -4,7 +4,7 @@ import TopSection from "../components/TopSection";
 import { Link } from "react-router";
 
 export default function Login() {
-  return (
+  const loginScreen = (
     <>
       <TopSection
         title={"Welcome back"}
@@ -23,12 +23,22 @@ export default function Login() {
         <button type="submit">Login</button>
       </Form>
       <Border />
-      <div className="flex gap-xs redirection">
+      <div className="redirection">
         <p className="label">New to Zetavex?</p>
         <Link to={"/register"} className="primary-link">
           Create an account
         </Link>
       </div>
+    </>
+  );
+
+  return (
+    <>
+      {window.innerWidth >= 768 ? (
+        <div className="desktop-section">{loginScreen}</div>
+      ) : (
+        <>{loginScreen}</>
+      )}
     </>
   );
 }
