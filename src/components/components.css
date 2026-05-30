@@ -33,7 +33,7 @@
     }
 
     .top-section {
-        @apply flex flex-col gap-xl;
+        @apply flex flex-col gap-xl w-full;
     }
     .top-section div {
         @apply flex flex-col gap-2;

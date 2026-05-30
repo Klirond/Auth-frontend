@@ -6,6 +6,7 @@ import ForgotPasswd from "./pages/ForgotPassword";
 import SentVerificationLink from "./pages/SentVerificationLink";
 import SentResetLink from "./pages/SentResetLink";
 import ResetPassword from "./pages/ResetPassword";
+import ConfirmationPage from "./pages/Confirmation";
 
 let router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ let router = createBrowserRouter([
       {
         path: "reset",
         Component: ResetPassword,
+      },
+      {
+        path: "confirmation",
+        Component: ConfirmationPage,
       },
     ],
   },
