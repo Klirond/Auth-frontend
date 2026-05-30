@@ -40,6 +40,41 @@ let router = createBrowserRouter([
       },
       {
         path: "confirmation",
+        loader: async ({ request }) => {
+          const API_URL = import.meta.env.VITE_API_URL;
+
+          const url = new URL(request.url);
+          const searchParams = url.searchParams;
+          const code = searchParams.get("code");
+
+          if (!code || code.length < 6) {
+            return {
+              messageTitle: "An error occured",
+              message: "Invalid verification link",
+            };
+          }
+
+          const response = await fetch(`${API_URL}/auth/verify`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              code,
+            }),
+          });
+
+          const json = await response.json();
+
+          const messageTitle =
+            json.status > 399 && json.status <= 599
+              ? "An error occured"
+              : "You are being redirected";
+
+          const message = json.message;
+
+          return { messageTitle, message };
+        },
         Component: ConfirmationPage,
       },
     ],

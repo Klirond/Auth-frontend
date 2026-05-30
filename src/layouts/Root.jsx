@@ -7,7 +7,8 @@ import { useNavigation } from "react-router";
 
 function Root() {
   const navigation = useNavigation();
-  const isNavigating = Boolean(navigation.location);
+  const isNavigating =
+    navigation.state === "loading" || navigation.state === "submitting";
 
   return (
     <>

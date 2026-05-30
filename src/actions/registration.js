@@ -83,6 +83,7 @@ export default async function registration({ request }) {
 
     return;
   } else {
+    sessionStorage.setItem("temp-session-user-email", email);
     location.pathname = "/verification-sent";
   }
 }
