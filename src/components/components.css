@@ -1,5 +1,6 @@
 @import "../index.css";
 
+<<<<<<< HEAD
 @layer utilities {
     footer {
         @apply flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:px-xl md:py-lg md:w-1/2;
@@ -16,6 +17,23 @@
     footer .footer-links-section {
         @apply flex h-fit gap-md;
     }
+=======
+footer {
+    @apply bg-midnight-black flex items-center justify-between;
+}
+footer .copyright-section {
+    @apply flex items-center gap-0.5;
+}
+footer .copyright-section h2 {
+    @apply text-md md:text-lg text-white font-bold font-logo;
+}
+footer .copyright-section p {
+    @apply text-sm md:text-md;
+}
+footer .footer-links-section {
+    @apply flex h-fit gap-md;
+}
+>>>>>>> parent of 6ac6af0 (Create login page & Fix footer)
 
     .primary-link,
     .secondary-link {
