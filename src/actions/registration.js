@@ -64,8 +64,6 @@ export default async function registration({ request }) {
   });
 
   const json = await response.json();
-  console.log("working");
-  console.log(json.status);
 
   if (json.status > 399 && json.status <= 599) {
     if (!json.message) {

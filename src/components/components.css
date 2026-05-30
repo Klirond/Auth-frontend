@@ -80,4 +80,11 @@
     .error-msg {
         @apply text-md text-red-500 font-normal font-jost;
     }
+
+    #loading-screen {
+        @apply flex items-center justify-center absolute top-0 right-0 z-50 w-screen h-screen bg-midnight-black/75;
+    }
+    #loading-screen svg {
+        @apply fill-main w-22 h-22 animate-spin;
+    }
 }
