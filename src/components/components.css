@@ -1,6 +1,5 @@
 @import "../index.css";
 
-<<<<<<< HEAD
 @layer utilities {
     footer {
         @apply flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:px-xl md:py-lg md:w-1/2;
@@ -17,23 +16,6 @@
     footer .footer-links-section {
         @apply flex h-fit gap-md;
     }
-=======
-footer {
-    @apply bg-midnight-black flex items-center justify-between;
-}
-footer .copyright-section {
-    @apply flex items-center gap-0.5;
-}
-footer .copyright-section h2 {
-    @apply text-md md:text-lg text-white font-bold font-logo;
-}
-footer .copyright-section p {
-    @apply text-sm md:text-md;
-}
-footer .footer-links-section {
-    @apply flex h-fit gap-md;
-}
->>>>>>> parent of 6ac6af0 (Create login page & Fix footer)
 
     .primary-link,
     .secondary-link {
@@ -85,35 +67,5 @@ footer .footer-links-section {
     button,
     .button {
         @apply font-logo font-medium text-white text-md bg-main px-sm py-xs border-none rounded-lg w-fit cursor-pointer;
-    }
-
-    .desktop-frame {
-        @apply text-midnight-black hidden invisible md:flex justify-center items-center flex-col gap-xl md:visible bg-main h-screen w-1/2 absolute top-0;
-    }
-    .desktop-frame div {
-        @apply text-center w-full;
-    }
-    .desktop-frame h1 {
-        @apply text-xl font-logo font-bold;
-    }
-    .desktop-frame .second-frame-button {
-        @apply bg-midnight-black;
-    }
-
-    .main-section {
-        @apply absolute top-0 flex flex-col gap-xl p-xl w-1/2;
-    }
-    .main-section > form {
-        @apply px-xl;
-    }
-    .main-section > .redirection {
-        @apply hidden;
-    }
-
-    .right {
-        @apply right-0;
-    }
-    .left {
-        @apply left-0;
     }
 }
