@@ -3,6 +3,7 @@ import Root from "./layouts/Root";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import ForgotPasswd from "./pages/ForgotPassword";
+import SentVerificationLink from "./pages/SentVerificationLink";
 
 let router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ let router = createBrowserRouter([
       {
         path: "forgot-password",
         Component: ForgotPasswd,
+      },
+      {
+        path: "verification-sent",
+        Component: SentVerificationLink,
       },
     ],
   },

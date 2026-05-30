@@ -1,7 +1,7 @@
 import { Form } from "react-router";
 import Border from "../components/Border";
 import TopSection from "../components/TopSection";
-import { Link } from "react-router";
+import LinkBox from "../components/LinkBox";
 
 export default function Login() {
   return (
@@ -20,21 +20,19 @@ export default function Login() {
           <p className="label">Password</p>
           <input type="password" placeholder="password" name="password" />
         </div>
-        <div className="redirection">
-          <p className="label">Forgot your login password?</p>
-          <Link to={"/forgot-password"} className="primary-link">
-            Reset password
-          </Link>
-        </div>
+        <LinkBox
+          message={"Forgot your login password?"}
+          link={"Reset password"}
+          to={"/forgot-password"}
+        />
         <button type="submit">Login</button>
       </Form>
       <Border />
-      <div className="redirection">
-        <p className="label">New to Zetavex?</p>
-        <Link to={"/register"} className="primary-link">
-          Create an account
-        </Link>
-      </div>
+      <LinkBox
+        message={"New to Zetavex?"}
+        link={"Create an account"}
+        to={"/register"}
+      />
     </>
   );
 }
