@@ -45,8 +45,8 @@ export default function Registration() {
     <>
       {window.innerWidth >= 768 ? (
         <>
-          <div className="main-section">{registrationScreen}</div>
-          <SecondaryDesktopFrame />
+          <div className="main-section left">{registrationScreen}</div>
+          <SecondaryDesktopFrame side={"right"} />
         </>
       ) : (
         <>{registrationScreen}</>

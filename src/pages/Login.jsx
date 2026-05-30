@@ -2,9 +2,10 @@ import { Form } from "react-router";
 import Border from "../components/Border";
 import TopSection from "../components/TopSection";
 import { Link } from "react-router";
+import SecondaryDesktopFrame from "../components/SecondaryDesktopFrame";
 
 export default function Login() {
-  return (
+  const loginScreen = (
     <>
       <TopSection
         title={"Welcome back"}
@@ -29,6 +30,19 @@ export default function Login() {
           Create an account
         </Link>
       </div>
+    </>
+  );
+
+  return (
+    <>
+      {window.innerWidth >= 768 ? (
+        <>
+          <SecondaryDesktopFrame side={"left"} />
+          <div className="main-section right">{loginScreen}</div>
+        </>
+      ) : (
+        <>{loginScreen}</>
+      )}
     </>
   );
 }

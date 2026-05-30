@@ -2,7 +2,7 @@
 
 @layer utilities {
     footer {
-        @apply bg-midnight-black flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:left-0 md:px-xl md:py-lg md:w-1/2;
+        @apply flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:px-xl md:py-lg md:w-1/2;
     }
     footer .copyright-section {
         @apply flex items-center gap-0.5;
@@ -70,7 +70,7 @@
     }
 
     .desktop-frame {
-        @apply text-midnight-black hidden invisible md:flex justify-center items-center flex-col gap-xl md:visible bg-main h-screen w-1/2 absolute top-0 right-0;
+        @apply text-midnight-black hidden invisible md:flex justify-center items-center flex-col gap-xl md:visible bg-main h-screen w-1/2 absolute top-0;
     }
     .desktop-frame:-moz-selection,
     .desktop-frame:selection {
@@ -87,12 +87,19 @@
     }
 
     .main-section {
-        @apply flex flex-col gap-xl p-xl pl-0 w-1/2;
+        @apply absolute top-0 flex flex-col gap-xl p-xl w-1/2;
     }
     .main-section > form {
         @apply px-xl;
     }
     .main-section > .redirection {
         @apply hidden;
+    }
+
+    .right {
+        @apply right-0;
+    }
+    .left {
+        @apply left-0;
     }
 }
