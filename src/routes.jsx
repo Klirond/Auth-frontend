@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Root from "./layouts/Root";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
+import ForgotPasswd from "./pages/ForgotPassword";
 
 let router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ let router = createBrowserRouter([
       {
         path: "login",
         Component: Login,
+      },
+      {
+        path: "forgot-password",
+        Component: ForgotPasswd,
       },
     ],
   },
