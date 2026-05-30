@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import ForgotPasswd from "./pages/ForgotPassword";
 import SentVerificationLink from "./pages/SentVerificationLink";
 import SentResetLink from "./pages/SentResetLink";
+import ResetPassword from "./pages/ResetPassword";
 
 let router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ let router = createBrowserRouter([
       {
         path: "reset-sent",
         Component: SentResetLink,
+      },
+      {
+        path: "reset",
+        Component: ResetPassword,
       },
     ],
   },
