@@ -13,16 +13,19 @@ export default function ResetPassword() {
       <Border />
       <Form method="post" className="form">
         <div>
-          <p className="label">Email</p>
-          <input type="email" placeholder="example@domain.com" name="email" />
-        </div>
-        <div>
           <p className="label">Password</p>
-          <input type="password" placeholder="password" name="password" />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            id="password"
+          />
+          <p className="error-msg" id="passwd-err"></p>
         </div>
         <div>
           <p className="label">Confirm password</p>
-          <input type="password" placeholder="password" />
+          <input type="password" placeholder="password" id="confirm-password" />
+          <p className="error-msg" id="passwd-conf-err"></p>
         </div>
         <button type="submit">Change</button>
       </Form>
