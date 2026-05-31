@@ -16,6 +16,7 @@ export default function ForgotPasswd() {
         <div>
           <p className="label">Email</p>
           <input type="email" placeholder="example@domain.com" name="email" />
+          <p className="error-msg" id="email-err"></p>
         </div>
         <button type="submit">Reset</button>
       </Form>

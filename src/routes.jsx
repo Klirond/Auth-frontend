@@ -9,6 +9,7 @@ import ResetPassword from "./pages/ResetPassword";
 import ConfirmationPage from "./pages/Confirmation";
 import registration from "./actions/registration";
 import login from "./actions/login";
+import forgotPassword from "./actions/forgotPassword";
 
 let router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ let router = createBrowserRouter([
       },
       {
         path: "forgot-password",
+        action: forgotPassword,
         Component: ForgotPasswd,
       },
       {
