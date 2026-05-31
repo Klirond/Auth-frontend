@@ -68,11 +68,12 @@ let router = createBrowserRouter([
             const messageTitle =
               result.status > 399 && result.status <= 599
                 ? "An error occured"
-                : "You are being redirected";
+                : "You are going to be redirected";
 
             const messageText = result.message;
 
             return {
+              status: result.status,
               messageTitle,
               messageText
             }
