@@ -51,16 +51,22 @@ let router = createBrowserRouter([
 
           const url = new URL(request.url);
           const searchParams = url.searchParams;
+
+          const redirectionPage = searchParams.get("redirect")
           const code = searchParams.get("code");
 
-          if (!code || code.length !== 6) {
+          console.log(code, redirectionPage)
+
+          if (!redirectionPage || !code || code.length !== 6 || (redirectionPage !== "login" && redirectionPage !== "reset")) {
             return {
               messageTitle: "An error occured",
               messageText: "Invalid verification link"
             }
           }
 
-          return fetch(`${API_URL}/auth/verify`, {
+          let API_LINK = redirectionPage === "login" ? "verify" : "reset-password-token"
+
+          return fetch(`${API_URL}/auth/${API_LINK}`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -78,6 +84,7 @@ let router = createBrowserRouter([
 
             return {
               status: result.status,
+              redirectionPage,
               messageTitle,
               messageText
             }
