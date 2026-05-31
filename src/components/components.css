@@ -1,90 +1,101 @@
 @import "../index.css";
 
 @layer utilities {
-    footer {
-        @apply flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:px-xl md:py-lg w-full;
-    }
-    footer .copyright-section {
-        @apply flex items-center gap-0.5;
-    }
-    footer .copyright-section h2 {
-        @apply text-md md:text-lg text-white font-bold;
-    }
-    footer .copyright-section p {
-        @apply text-sm md:text-md;
-    }
-    footer .footer-links-section {
-        @apply flex h-fit gap-md;
-    }
+  footer {
+    @apply flex items-center justify-between mt-auto md:mt-0 md:absolute md:bottom-0 md:px-xl md:py-lg w-full;
+  }
 
-    .primary-link,
-    .secondary-link {
-        @apply text-sm md:text-md underline underline-offset-2;
-    }
-    .secondary-link {
-        @apply text-secondary;
-    }
-    .primary-link {
-        @apply text-white;
-    }
+  footer .copyright-section {
+    @apply flex items-center gap-0.5;
+  }
 
-    .full-logo-svg {
-        @apply max-w-[90%] md:max-w-[60%];
-    }
+  footer .copyright-section h2 {
+    @apply text-md md:text-lg text-white font-bold;
+  }
 
-    .top-section {
-        @apply flex flex-col gap-xl w-full;
-    }
-    .top-section div {
-        @apply flex flex-col gap-2;
-    }
-    .top-section div h2 {
-        @apply text-xl font-bold font-logo;
-    }
+  footer .copyright-section p {
+    @apply text-sm md:text-md;
+  }
 
-    .border-separator {
-        @apply w-full h-px bg-secondary;
-    }
+  footer .footer-links-section {
+    @apply flex h-fit gap-md;
+  }
 
-    .label {
-        @apply text-sm text-secondary;
-    }
+  .primary-link,
+  .secondary-link {
+    @apply text-sm md:text-md underline underline-offset-2;
+  }
 
-    input {
-        @apply bg-transparent border-2 border-secondary w-full rounded-lg px-sm py-xs;
-    }
+  .secondary-link {
+    @apply text-secondary;
+  }
 
-    form {
-        @apply flex flex-col gap-md items-center w-full;
-    }
-    form div {
-        @apply flex flex-col gap-xs w-full;
-    }
-    form button {
-        @apply mt-lg;
-    }
+  .primary-link {
+    @apply text-white;
+  }
 
-    button,
-    .button {
-        @apply font-logo font-medium text-white text-md bg-main px-sm py-xs border-none rounded-lg w-fit cursor-pointer;
-    }
+  .full-logo-svg {
+    @apply max-w-[90%] md:max-w-[60%];
+  }
 
-    .desktop-section {
-        @apply flex flex-col gap-xl p-xl w-1/2 border-4 rounded-lg border-dark-borders bg-third;
-    }
+  .top-section {
+    @apply flex flex-col gap-xl w-full;
+  }
 
-    .redirection {
-        @apply flex flex-row gap-xs justify-start items-center w-full;
-    }
+  .top-section div {
+    @apply flex flex-col gap-2;
+  }
 
-    .error-msg {
-        @apply text-md text-red-500 font-normal font-jost;
-    }
+  .top-section div h2 {
+    @apply text-xl font-bold font-logo;
+  }
 
-    #loading-screen {
-        @apply flex items-center justify-center absolute top-0 right-0 z-50 w-screen h-screen bg-midnight-black/75;
-    }
-    #loading-screen svg {
-        @apply fill-main w-22 h-22 animate-spin;
-    }
+  .border-separator {
+    @apply w-full h-px bg-secondary;
+  }
+
+  .label {
+    @apply text-sm text-secondary;
+  }
+
+  input {
+    @apply bg-transparent border-2 border-secondary w-full rounded-lg px-sm py-xs;
+  }
+
+  form {
+    @apply flex flex-col gap-md items-center w-full;
+  }
+
+  form div {
+    @apply flex flex-col gap-xs w-full;
+  }
+
+  form button {
+    @apply mt-lg;
+  }
+
+  button,
+  .button {
+    @apply font-logo font-medium text-white text-md bg-main px-sm py-xs border-none rounded-lg w-fit cursor-pointer;
+  }
+
+  .desktop-section {
+    @apply flex flex-col gap-xl p-xl w-1/2 border-4 rounded-lg border-dark-borders bg-third;
+  }
+
+  .redirection {
+    @apply flex flex-row gap-xs justify-start items-center w-full;
+  }
+
+  .error-msg {
+    @apply text-md text-red-500 font-normal font-jost;
+  }
+
+  #loading-screen {
+    @apply flex items-center justify-center absolute top-0 right-0 z-50 w-screen h-screen bg-midnight-black;
+  }
+
+  #loading-screen svg {
+    @apply fill-main w-22 h-22 animate-spin;
+  }
 }
