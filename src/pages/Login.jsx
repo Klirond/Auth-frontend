@@ -15,10 +15,12 @@ export default function Login() {
         <div>
           <p className="label">Email</p>
           <input type="email" placeholder="example@domain.com" name="email" />
+          <p className="error-msg" id="email-err"></p>
         </div>
         <div>
           <p className="label">Password</p>
           <input type="password" placeholder="password" name="password" />
+          <p className="error-msg" id="passwd-err"></p>
         </div>
         <LinkBox
           message={"Forgot your login password?"}

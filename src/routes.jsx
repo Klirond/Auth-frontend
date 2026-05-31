@@ -8,6 +8,7 @@ import SentResetLink from "./pages/SentResetLink";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmationPage from "./pages/Confirmation";
 import registration from "./actions/registration";
+import login from "./actions/login";
 
 let router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ let router = createBrowserRouter([
       },
       {
         path: "login",
+        action: login,
         Component: Login,
       },
       {

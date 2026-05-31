@@ -44,6 +44,8 @@ export default async function registration({ request }) {
   ) {
     document.getElementById("passwd-conf-err").innerHTML =
       "Passwords don't match. Please retype password.";
+
+    return;
   }
 
   document.getElementById("passwd-conf-err").innerHTML = "";
