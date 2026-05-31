@@ -1,4 +1,5 @@
 import * as z from "zod";
+import { redirect } from "react-router";
 
 export default async function registration({ request }) {
   const registrationValidation = z.object({

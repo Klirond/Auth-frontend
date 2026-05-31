@@ -13,7 +13,6 @@ let router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    loader: () => { },
     children: [
       {
         path: "register",
@@ -53,8 +52,8 @@ let router = createBrowserRouter([
           if (!code || code.length !== 6) {
             return {
               messageTitle: "An error occured",
-              message: "Invalid verification link",
-            };
+              messageText: "Invalid verification link"
+            }
           }
 
           return fetch(`${API_URL}/auth/verify`, {
@@ -65,21 +64,20 @@ let router = createBrowserRouter([
             body: JSON.stringify({
               code,
             }),
+          }).then(response => response.json()).then(result => {
+            const messageTitle =
+              result.status > 399 && result.status <= 599
+                ? "An error occured"
+                : "You are being redirected";
+
+            const messageText = result.message;
+
+            return {
+              messageTitle,
+              messageText
+            }
           })
-            .then((response) => response.json())
-            .then((json) => {
-              const messageTitle =
-                json.status > 399 && json.status <= 599
-                  ? "An error occured"
-                  : "You are being redirected";
 
-              const message = json.message.code ? json.message.code[0] : json.message;
-
-              return { messageTitle, message };
-            })
-            .catch((error) => {
-              return { messageTitle: "An error occured", message: error };
-            });
         },
       },
     ],

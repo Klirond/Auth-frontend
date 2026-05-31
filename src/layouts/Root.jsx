@@ -1,13 +1,19 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import LoadingScreen from "../components/LoadingScreen";
 import "./layouts.css";
 
 import { Outlet } from "react-router";
 import { useNavigation } from "react-router";
+import { useState } from "react";
 
 function Root() {
   const navigation = useNavigation();
-  const isNavigating = Boolean(navigation.location);
+  const [isNavigating, setIsNavigating] = useState(navigation.state === "loading" || navigation.state === "submitting");
+
+  useEffect(() => {
+    setIsNavigating(navigation.state === "loading" || navigation.state === "submitting")
+  }, [navigation.state])
 
   return (
     <>
