@@ -70,6 +70,6 @@ export default async function reset({ request }) {
       : json.message;
     return;
   } else {
-    return redirect("/success");
+    return redirect("/login");
   }
 }
