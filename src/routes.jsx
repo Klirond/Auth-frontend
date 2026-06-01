@@ -14,6 +14,7 @@ import forgotPassword from "./actions/forgotPassword";
 import reset from "./actions/reset";
 import confirmation from "./loader/confirmation";
 import cancel from "./loader/cancel";
+import resendVerification from "./loader/resendVerification";
 
 let router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ let router = createBrowserRouter([
       {
         path: "verification-sent",
         Component: SentVerificationLink,
+      },
+      {
+        path: "resend-verification",
+        loader: resendVerification,
       },
       {
         path: "reset-sent",
