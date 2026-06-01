@@ -72,6 +72,10 @@ let router = createBrowserRouter([
         Component: ConfirmationPage,
         loader: confirmation,
       },
+      {
+        path: "*",
+        Component: () => <TopSection title={"Page not found"} text={""} />,
+      },
     ],
   },
 ]);
