@@ -7,8 +7,6 @@ export default function confirmation({ request }) {
   const redirectionPage = searchParams.get("redirect");
   const code = searchParams.get("code");
 
-  console.log(code, redirectionPage);
-
   if (
     !redirectionPage ||
     !code ||
