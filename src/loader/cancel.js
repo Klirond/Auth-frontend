@@ -18,7 +18,6 @@ export default async function cancel() {
       const messageText = result.message.token
         ? result.message.token[0]
         : result.message;
-      console.log(messageText);
 
       return {
         messageTitle,

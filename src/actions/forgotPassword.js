@@ -3,14 +3,14 @@ import * as z from "zod";
 
 export default async function forgotPassword({ request }) {
   const emailValidation = z.object({
-    email: z.email("Invalid email")
-  })
+    email: z.email("Invalid email"),
+  });
 
   const data = await request.formData();
 
   const result = emailValidation.safeParse({
-    email: data.get("email")
-  })
+    email: data.get("email"),
+  });
 
   if (!result.success) {
     const error = z.flattenError(result.error).fieldErrors;
@@ -31,12 +31,12 @@ export default async function forgotPassword({ request }) {
   const response = await fetch(`${API_URL}/auth/forgot-password`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email
-    })
-  })
+      email,
+    }),
+  });
 
   const json = await response.json();
 
@@ -52,6 +52,6 @@ export default async function forgotPassword({ request }) {
 
     return;
   } else {
-    return redirect("/reset-sent")
+    return redirect("/reset-sent");
   }
 }

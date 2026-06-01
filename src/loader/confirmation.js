@@ -30,6 +30,7 @@ export default function confirmation({ request }) {
     body: JSON.stringify({
       code,
     }),
+    credentials: "include",
   })
     .then((response) => response.json())
     .then((result) => {
