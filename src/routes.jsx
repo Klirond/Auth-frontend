@@ -73,6 +73,17 @@ let router = createBrowserRouter([
         loader: confirmation,
       },
       {
+        path: "error",
+        Component: () => (
+          <TopSection
+            title={"An unexpected error occured"}
+            text={
+              "Please go back and try again. If error persists, try logging out or cancel and redo the operation."
+            }
+          />
+        ),
+      },
+      {
         path: "*",
         Component: () => <TopSection title={"Page not found"} text={""} />,
       },
