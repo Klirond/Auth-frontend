@@ -11,6 +11,8 @@ import registration from "./actions/registration";
 import login from "./actions/login";
 import forgotPassword from "./actions/forgotPassword";
 import reset from "./actions/reset";
+import cancel from "./actions/cancel";
+import confirmation from "./loader/confirmation";
 
 let router = createBrowserRouter([
   {
@@ -46,60 +48,21 @@ let router = createBrowserRouter([
         Component: ResetPassword,
       },
       {
+        path: "cancel",
+        loader: cancel,
+        Component: (
+          <TopSection
+            title={"Operation canceled"}
+            text={
+              "Operation to change your password has been canceled. You can close this page safely now."
+            }
+          />
+        ),
+      },
+      {
         path: "confirmation",
         Component: ConfirmationPage,
-        loader: ({ request }) => {
-          const API_URL = import.meta.env.VITE_API_URL;
-
-          const url = new URL(request.url);
-          const searchParams = url.searchParams;
-
-          const redirectionPage = searchParams.get("redirect");
-          const code = searchParams.get("code");
-
-          console.log(code, redirectionPage);
-
-          if (
-            !redirectionPage ||
-            !code ||
-            code.length !== 6 ||
-            (redirectionPage !== "login" && redirectionPage !== "reset")
-          ) {
-            return {
-              messageTitle: "An error occured",
-              messageText: "Invalid verification link",
-            };
-          }
-
-          let API_LINK =
-            redirectionPage === "login" ? "verify" : "reset-password-token";
-
-          return fetch(`${API_URL}/auth/${API_LINK}`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              code,
-            }),
-          })
-            .then((response) => response.json())
-            .then((result) => {
-              const messageTitle =
-                result.status > 399 && result.status <= 599
-                  ? "An error occured"
-                  : "You are going to be redirected";
-
-              const messageText = result.message;
-
-              return {
-                status: result.status,
-                redirectionPage,
-                messageTitle,
-                messageText,
-              };
-            });
-        },
+        loader: confirmation,
       },
     ],
   },
