@@ -15,6 +15,7 @@ import reset from "./actions/reset";
 import confirmation from "./loader/confirmation";
 import cancel from "./loader/cancel";
 import resendVerification from "./loader/resendVerification";
+import resendReset from "./loader/resendReset";
 
 let router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ let router = createBrowserRouter([
       {
         path: "reset-sent",
         Component: SentResetLink,
+      },
+      {
+        path: "resend-reset",
+        loader: resendReset,
       },
       {
         path: "reset",
