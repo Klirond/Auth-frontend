@@ -1,4 +1,4 @@
-import { createBrowserRouter, useLoaderData } from "react-router";
+import { createBrowserRouter, redirect, useLoaderData } from "react-router";
 import Root from "./layouts/Root";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
@@ -22,6 +22,10 @@ let router = createBrowserRouter([
     path: "/",
     Component: Root,
     children: [
+      {
+        index: true,
+        loader: () => redirect("register/"),
+      },
       {
         path: "register",
         action: registration,
