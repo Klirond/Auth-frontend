@@ -1,16 +1,64 @@
-# React + Vite
+<div align="center">
+  <a href="">
+    <img src="https://assets.zetavex.workers.dev/Zetavex%20full%20logo.svg" alt="Zetavex logo" width="500" />
+  </a>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+<div align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<div>
+  
+  ![Static Badge](https://img.shields.io/badge/Apache%20v2.0-r?style=flat&logo=apache&logoColor=white&label=licence&labelColor=green&color=white)
+  [![Static Badge](https://img.shields.io/badge/React-blue?style=flat&logo=react&logoColor=white)](https://react.dev)
+  [![Static Badge](https://img.shields.io/badge/Tailwindcss-skyblue?style=flat&logo=tailwindcss&logoColor=black)](https://tailwindcss.com)
+  [![Static Badge](https://img.shields.io/badge/React%20Router-grey?style=flat&logo=reactrouter&logoColor=orange)](https://reactrouter.com)
 
-## React Compiler
+  
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<div align="center">
 
-## Expanding the ESLint configuration
+  [![Static Badge](https://img.shields.io/badge/Follow%20me-r?style=flat&logo=bluesky&logoColor=white&label=%40shaedow2000&labelColor=blue&color=white)]([https://x.com](https://x.com/shaedow2000))
+  [![Static Badge](https://img.shields.io/badge/Follow%20me-r?style=flat&logo=x&logoColor=white&label=%40shaedow2000&labelColor=black&color=white)](https://bsky.app/profile/shaedow2000.bsky.social)
+  
+</div>
+  
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend part of the Zetavex authentication process.
+
+I've also made it fully free & open-source to strengthen the trust between us and our users. 
+
+---
+
+# Stack
+
+## UI
+
+The UI has been made with:
+- **ReactJS**
+- **Tailwindcss**
+- **Vite**
+
+## Other
+
+The app is made possible with the use of **React Router**!
+
+# Contributing
+
+All contributions are welcome!
+
+Just:
+
+- Make sure to open a PR that is well documented and that solves one, and ONLY one, specific issue, either from an existing open issue or an issue that you opened.
+- PRs with multiple fixes from different unrelated parts will be declined.
+- Unclear PR documentation will automatically make the PR declined.
+- Shady code is unacceptable, and we will decline the PR.
+- Make sure to document the code and add comments, not too many, not too few.
+
+# License
+
+Licensed under the `Apache-2.0 license`. Zetavex © 2026. All rights reserved.
+
