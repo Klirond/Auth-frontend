@@ -1,7 +1,5 @@
 import { Form } from "react-router";
-import Border from "../components/Border";
-import TopSection from "../components/TopSection";
-import LinkBox from "../components/LinkBox";
+import { TopSection, LinkBox, Border } from "zetavex-ui-components";
 
 export default function ResetPassword() {
   return (

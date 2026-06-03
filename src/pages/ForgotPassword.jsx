@@ -1,6 +1,5 @@
 import { Form } from "react-router";
-import Border from "../components/Border";
-import TopSection from "../components/TopSection";
+import { TopSection, Border } from "zetavex-ui-components";
 
 export default function ForgotPasswd() {
   return (

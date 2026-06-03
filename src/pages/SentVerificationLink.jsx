@@ -1,6 +1,4 @@
-import Border from "../components/Border";
-import LinkBox from "../components/LinkBox";
-import TopSection from "../components/TopSection";
+import { TopSection, Border, LinkBox } from "zetavex-ui-components";
 
 export default function SentVerificationLink() {
   return (

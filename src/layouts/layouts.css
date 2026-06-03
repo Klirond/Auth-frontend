@@ -1,7 +1,0 @@
-@import "../index.css";
-
-@layer utilities {
-    #root-layout {
-        @apply flex flex-col items-center justify-center gap-xl px-md py-lg md:p-xl w-screen h-fit min-h-screen bg-midnight-black text-white;
-    }
-}

@@ -1,5 +1,5 @@
 import { createBrowserRouter, redirect, useLoaderData } from "react-router";
-import Root from "./layouts/Root";
+import { AuthLayout as Root } from "zetavex-ui-components";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import ForgotPasswd from "./pages/ForgotPassword";
@@ -7,7 +7,7 @@ import SentVerificationLink from "./pages/SentVerificationLink";
 import SentResetLink from "./pages/SentResetLink";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmationPage from "./pages/Confirmation";
-import TopSection from "./components/TopSection";
+import { TopSection } from "zetavex-ui-components";
 import registration from "./actions/registration";
 import login from "./actions/login";
 import forgotPassword from "./actions/forgotPassword";

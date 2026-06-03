@@ -1,5 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router";
-import TopSection from "../components/TopSection";
+import { TopSection } from "zetavex-ui-components";
 import { useEffect } from "react";
 
 export default function ConfirmationPage() {
