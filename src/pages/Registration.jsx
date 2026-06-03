@@ -1,5 +1,5 @@
 import { Form } from "react-router";
-import { Border, TopSection, LinkBox } from "zetavex-ui-components";
+import { TopSection, LinkBox } from "zetavex-ui-components";
 
 export default function Registration() {
   return (
@@ -8,7 +8,6 @@ export default function Registration() {
         title={"Welcome"}
         text={"Start you journey here by creating a new account."}
       />
-      <Border />
       <Form method="post" className="form">
         <div>
           <p className="label">Username</p>
@@ -37,7 +36,6 @@ export default function Registration() {
         </div>
         <button type="submit">Register</button>
       </Form>
-      <Border />
       <LinkBox
         message={"Already have an account?"}
         link={"Login"}

@@ -8,7 +8,6 @@ export default function ResetPassword() {
         title={"Reset your password"}
         text={"Enter a new password."}
       />
-      <Border />
       <Form method="post" className="form">
         <div>
           <p className="label">Password</p>
@@ -27,7 +26,6 @@ export default function ResetPassword() {
         </div>
         <button type="submit">Change</button>
       </Form>
-      <Border />
       <LinkBox
         message={"Don't want to change your password?"}
         link={"Cancel"}

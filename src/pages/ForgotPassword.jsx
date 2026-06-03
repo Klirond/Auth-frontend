@@ -10,7 +10,6 @@ export default function ForgotPasswd() {
           "Enter your recovery email so that we will send you a reset link to change your password."
         }
       />
-      <Border />
       <Form method="post" className="form">
         <div>
           <p className="label">Email</p>
