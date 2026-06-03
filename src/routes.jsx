@@ -1,5 +1,5 @@
-import { createBrowserRouter, redirect, useLoaderData } from "react-router";
-import { AuthLayout as Root } from "zetavex-ui-components";
+import { createBrowserRouter, redirect, useLoaderData } from "react-router-dom";
+import AuthLayout from "./layouts/Root";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import ForgotPasswd from "./pages/ForgotPassword";
@@ -20,7 +20,7 @@ import resendReset from "./loader/resendReset";
 let router = createBrowserRouter([
   {
     path: "/",
-    Component: Root,
+    Component: AuthLayout,
     children: [
       {
         index: true,
