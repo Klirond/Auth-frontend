@@ -10,7 +10,7 @@ function AuthLayout() {
   const [isNavigating, setIsNavigating] = useState(
     navigation.state === "loading" || navigation.state === "submitting",
   );
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 700);
 
   useEffect(() => {
     setIsNavigating(
@@ -20,7 +20,7 @@ function AuthLayout() {
 
   useEffect(() => {
     function handleResize() {
-      setIsDesktop(window.innerWidth >= 768);
+      setIsDesktop(window.innerWidth >= 700);
     }
 
     window.addEventListener("resize", handleResize);

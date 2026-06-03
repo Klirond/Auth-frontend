@@ -9,6 +9,6 @@
   }
 
   .desktop-section {
-    @apply flex flex-col gap-xl p-xl w-1/2 border-4 rounded-lg border-dark-borders bg-third;
+    @apply flex flex-col gap-xl md:gap-sm p-lg w-2/3 lg:w-1/2 my-auto border-4 rounded-lg border-dark-borders bg-third;
   }
 }
