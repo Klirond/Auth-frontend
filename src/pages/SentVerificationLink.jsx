@@ -1,4 +1,4 @@
-import { TopSection, Border, LinkBox } from "zetavex-ui-components";
+import { TopSection, Border, LinkBox } from "klirond-ui-components";
 
 export default function SentVerificationLink() {
   return (

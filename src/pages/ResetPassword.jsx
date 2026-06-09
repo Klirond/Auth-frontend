@@ -1,5 +1,5 @@
 import { Form } from "react-router";
-import { TopSection, LinkBox } from "zetavex-ui-components";
+import { TopSection, LinkBox } from "klirond-ui-components";
 
 export default function ResetPassword() {
   return (

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { LoadingScreen, Footer } from "zetavex-ui-components";
+import { LoadingScreen, Footer } from "klirond-ui-components";
 
 import { Outlet } from "react-router-dom";
 import { useNavigation } from "react-router-dom";

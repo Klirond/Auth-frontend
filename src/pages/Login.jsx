@@ -1,5 +1,5 @@
 import { Form } from "react-router";
-import { TopSection, LinkBox } from "zetavex-ui-components";
+import { TopSection, LinkBox } from "klirond-ui-components";
 
 export default function Login() {
   return (
@@ -27,7 +27,7 @@ export default function Login() {
         <button type="submit">Login</button>
       </Form>
       <LinkBox
-        message={"New to Zetavex?"}
+        message={"New to Klirond?"}
         link={"Create an account"}
         to={"/register"}
       />

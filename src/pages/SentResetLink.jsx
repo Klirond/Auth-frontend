@@ -1,4 +1,4 @@
-import { TopSection, LinkBox, Border } from "zetavex-ui-components";
+import { TopSection, LinkBox, Border } from "klirond-ui-components";
 
 export default function SentResetLink() {
   return (

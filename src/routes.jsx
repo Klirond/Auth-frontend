@@ -7,7 +7,7 @@ import SentVerificationLink from "./pages/SentVerificationLink";
 import SentResetLink from "./pages/SentResetLink";
 import ResetPassword from "./pages/ResetPassword";
 import ConfirmationPage from "./pages/Confirmation";
-import { TopSection } from "zetavex-ui-components";
+import { TopSection } from "klirond-ui-components";
 import registration from "./actions/registration";
 import login from "./actions/login";
 import forgotPassword from "./actions/forgotPassword";
