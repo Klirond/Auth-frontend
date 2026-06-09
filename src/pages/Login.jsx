@@ -24,7 +24,9 @@ export default function Login() {
           link={"Reset password"}
           to={"/forgot-password"}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="full-btn">
+          Login
+        </button>
       </Form>
       <LinkBox
         message={"New to Klirond?"}

@@ -16,7 +16,9 @@ export default function ForgotPasswd() {
           <input type="email" placeholder="example@domain.com" name="email" />
           <p className="error-msg" id="email-err"></p>
         </div>
-        <button type="submit">Reset</button>
+        <button type="submit" className="full-btn">
+          Reset
+        </button>
       </Form>
     </>
   );

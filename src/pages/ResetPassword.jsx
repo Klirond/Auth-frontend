@@ -24,7 +24,9 @@ export default function ResetPassword() {
           <input type="password" placeholder="password" id="confirm-password" />
           <p className="error-msg" id="passwd-conf-err"></p>
         </div>
-        <button type="submit">Change</button>
+        <button type="submit" className="full-btn">
+          Change
+        </button>
       </Form>
       <LinkBox
         message={"Don't want to change your password?"}

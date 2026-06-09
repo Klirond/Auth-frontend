@@ -34,7 +34,9 @@ export default function Registration() {
           <input type="password" placeholder="password" id="confirm-password" />
           <p className="error-msg" id="passwd-conf-err"></p>
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className="full-btn">
+          Register
+        </button>
       </Form>
       <LinkBox
         message={"Already have an account?"}
