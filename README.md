@@ -1,6 +1,6 @@
 <div align="center">
   <a href="">
-    <img src="https://assets.zetavex.workers.dev/Zetavex%20full%20logo.svg" alt="Zetavex logo" width="500" />
+    <img src="https://assets.klirond.workers.dev/primary-full-logo-dark-bg.svg" alt="KLIROND logo" width="500" />
   </a>
 </div>
 
@@ -27,7 +27,7 @@
   
 </div>
 
-The frontend part of the Zetavex authentication process.
+The frontend part of the KLIROND authentication process.
 
 I've also made it fully free & open-source to strengthen the trust between us and our users. 
 
