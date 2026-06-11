@@ -24,7 +24,16 @@ let router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => redirect("register/"),
+        loader: () => {
+          const params = new URLSearchParams(document.location.search);
+          const redirectionPage = params.get("redirectionPage");
+
+          if (redirectionPage) {
+            sessionStorage.setItem("redirect", redirectionPage);
+          }
+
+          return redirect("register/");
+        },
       },
       {
         path: "register",

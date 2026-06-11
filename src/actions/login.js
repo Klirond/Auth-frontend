@@ -4,15 +4,15 @@ import * as z from "zod";
 export default async function login({ request }) {
   const loginValidation = z.object({
     email: z.email("Inalid email"),
-    password: z.string()
-  })
+    password: z.string(),
+  });
 
   const data = await request.formData();
 
   const result = loginValidation.safeParse({
     email: data.get("email"),
-    password: data.get("password")
-  })
+    password: data.get("password"),
+  });
 
   if (!result.success) {
     const error = z.flattenError(result.error).fieldErrors;
@@ -30,7 +30,6 @@ export default async function login({ request }) {
   document.getElementById("email-err").innerHTML = "";
   document.getElementById("passwd-err").innerHTML = "";
 
-
   const { email, password } = result.data;
 
   const API_URL = import.meta.env.VITE_API_URL;
@@ -38,19 +37,20 @@ export default async function login({ request }) {
   const response = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       email,
-      password
-    })
-  })
+      password,
+    }),
+  });
 
   const json = await response.json();
 
   if (json.status > 399 && json.status <= 599) {
     if (!json.message) {
-      document.getElementById("passwd-err").innerHTML = "An error occured. Please try again";
+      document.getElementById("passwd-err").innerHTML =
+        "An error occured. Please try again";
 
       return;
     }
@@ -63,6 +63,11 @@ export default async function login({ request }) {
 
     return;
   } else {
-    return redirect("/sucess")
+    const redirectionPage = sessionStorage.getItem("redirect");
+    if (redirectionPage) {
+      return redirect(redirectionPage);
+    }
+
+    return redirect("/sucess");
   }
 }
