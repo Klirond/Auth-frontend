@@ -29,7 +29,7 @@ let router = createBrowserRouter([
           const redirectionPage = params.get("redirectionPage");
 
           if (redirectionPage) {
-            sessionStorage.setItem("redirect", redirectionPage);
+            localStorage.setItem("redirect", redirectionPage);
           }
 
           return redirect("register/");
