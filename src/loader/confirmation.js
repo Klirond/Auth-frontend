@@ -11,7 +11,9 @@ export default function confirmation({ request }) {
     !redirectionPage ||
     !code ||
     code.length !== 6 ||
-    (redirectionPage !== "login" && redirectionPage !== "reset")
+    (redirectionPage !== "login" &&
+      redirectionPage !== "reset" &&
+      redirectionPage !== "logout-all")
   ) {
     return {
       messageTitle: "An error occured",
@@ -21,6 +23,14 @@ export default function confirmation({ request }) {
 
   let API_LINK =
     redirectionPage === "login" ? "verify" : "reset-password-token";
+
+  if (redirectionPage === "login") {
+    API_LINK = "verify";
+  } else if (redirectionPage === "reset") {
+    API_LINK = "reset-password-token";
+  } else {
+    API_LINK = "logout-all";
+  }
 
   return fetch(`${API_URL}/auth/${API_LINK}`, {
     method: "POST",
