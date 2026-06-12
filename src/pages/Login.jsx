@@ -1,7 +1,15 @@
-import { Form } from "react-router";
+import { Form, useActionData } from "react-router";
 import { TopSection, LinkBox } from "klirond-ui-components";
 
 export default function Login() {
+  const data = useActionData();
+
+  if (data?.success) {
+    window.location.href = data?.redirectionPage
+      ? data.redirectionPage
+      : "/success";
+  }
+
   return (
     <>
       <TopSection
