@@ -43,6 +43,7 @@ export default async function login({ request }) {
       email,
       password,
     }),
+    credentials: "include",
   });
 
   const json = await response.json();
