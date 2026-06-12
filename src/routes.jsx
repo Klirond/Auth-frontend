@@ -84,7 +84,7 @@ let router = createBrowserRouter([
       },
       {
         path: "logout-all-sent",
-        Component: () => SentLogoutAllLink,
+        Component: SentLogoutAllLink,
       },
       {
         path: "logout-all-resend",
