@@ -1,4 +1,3 @@
-import { redirect } from "react-router";
 import * as z from "zod";
 
 export default async function login({ request }) {
@@ -53,7 +52,7 @@ export default async function login({ request }) {
       document.getElementById("passwd-err").innerHTML =
         "An error occured. Please try again";
 
-      return;
+      return { success: false };
     }
 
     if (json.message.includes("email")) {
@@ -62,13 +61,12 @@ export default async function login({ request }) {
       document.getElementById("passwd-err").innerHTML = json.message;
     }
 
-    return;
+    return { success: false };
   } else {
-    const redirectionPage = sessionStorage.getItem("redirect");
-    if (redirectionPage) {
-      return redirect(redirectionPage);
-    }
-
-    return redirect("/sucess");
+    const redirectionPage = localStorage.getItem("redirect");
+    return {
+      success: true,
+      redirectionPage: redirectionPage ? redirectionPage : undefined,
+    };
   }
 }
