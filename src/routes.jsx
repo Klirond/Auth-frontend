@@ -16,6 +16,8 @@ import confirmation from "./loader/confirmation";
 import cancel from "./loader/cancel";
 import resendVerification from "./loader/resendVerification";
 import resendReset from "./loader/resendReset";
+import SentLogoutAllLink from "./pages/SentLogoutAllCode";
+import resendLogouAllCode from "./loader/resendLogoutAllCode";
 
 let router = createBrowserRouter([
   {
@@ -79,6 +81,14 @@ let router = createBrowserRouter([
           return <TopSection title={messageTitle} text={messageText} />;
         },
         loader: cancel,
+      },
+      {
+        path: "logout-all-sent",
+        Component: () => SentLogoutAllLink,
+      },
+      {
+        path: "logout-all-resend",
+        loader: resendLogouAllCode,
       },
       {
         path: "confirmation",
