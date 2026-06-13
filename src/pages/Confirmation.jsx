@@ -11,7 +11,10 @@ export default function ConfirmationPage() {
   useEffect(() => {
     let redirect;
     if (status > 199 && status <= 299) {
-      if (redirectionPage !== "logout-all") {
+      if (
+        redirectionPage !== "logout-all" ||
+        redirectionPage !== "delete-account"
+      ) {
         redirect = setInterval(
           () => navigate(`/${redirectionPage ? redirectionPage : ""}`),
           2000,

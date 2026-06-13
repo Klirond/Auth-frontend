@@ -49,7 +49,7 @@ export default function confirmation({ request }) {
       const messageTitle =
         result.status > 399 && result.status <= 599
           ? "An error occured"
-          : API_LINK === "logout-all"
+          : API_LINK === "logout-all" || API_LINK === "delete-account"
             ? "You can close this tab now"
             : "You are going to be redirected";
 
