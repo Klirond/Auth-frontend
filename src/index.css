@@ -11,4 +11,8 @@
   .desktop-section {
     @apply flex flex-col gap-xl p-lg w-2/3 lg:w-1/2 my-auto rounded-lg;
   }
+
+  .red-btn {
+    @apply hover:bg-red-500 hover:text-light-color hover:border-red-500;
+  }
 }

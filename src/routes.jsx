@@ -18,6 +18,8 @@ import resendVerification from "./loader/resendVerification";
 import resendReset from "./loader/resendReset";
 import SentLogoutAllLink from "./pages/SentLogoutAllCode";
 import resendLogouAllCode from "./loader/resendLogoutAllCode";
+import DeleteAccount from "./pages/DeleteAccount";
+import deleteAccountRequest from "./actions/deleteAccountRequest";
 
 let router = createBrowserRouter([
   {
@@ -94,6 +96,11 @@ let router = createBrowserRouter([
         path: "confirmation",
         Component: ConfirmationPage,
         loader: confirmation,
+      },
+      {
+        path: "delete-account",
+        Component: DeleteAccount,
+        action: deleteAccountRequest,
       },
       {
         path: "error",
