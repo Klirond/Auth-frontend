@@ -63,10 +63,9 @@ export default async function deleteAccountRequest({ request }) {
 
     return { success: false };
   } else {
-    const redirectionPage = localStorage.getItem("redirect");
     return {
       success: true,
-      redirectionPage: redirectionPage ? redirectionPage : undefined,
+      redirectionPage: "/delete-account-sent",
     };
   }
 }
