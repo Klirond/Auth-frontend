@@ -21,6 +21,7 @@ import resendLogouAllCode from "./loader/resendLogoutAllCode";
 import DeleteAccount from "./pages/DeleteAccount";
 import deleteAccountRequest from "./actions/deleteAccountRequest";
 import SentDeleteAccountLink from "./pages/SentDeleteAccountCode";
+import resendDeleteAccount from "./loader/resendDeleteAccountCode";
 
 let router = createBrowserRouter([
   {
@@ -109,7 +110,7 @@ let router = createBrowserRouter([
       },
       {
         path: "delete-account-resend",
-        loader: () => {},
+        loader: resendDeleteAccount,
       },
       {
         path: "error",
