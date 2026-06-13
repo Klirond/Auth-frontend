@@ -1,14 +1,14 @@
 import * as z from "zod";
 
-export default async function login({ request }) {
-  const loginValidation = z.object({
+export default async function deleteAccountRequest({ request }) {
+  const accountValidation = z.object({
     email: z.email("Invalid email"),
     password: z.string(),
   });
 
   const data = await request.formData();
 
-  const result = loginValidation.safeParse({
+  const result = accountValidation.safeParse({
     email: data.get("email"),
     password: data.get("password"),
   });
@@ -33,7 +33,7 @@ export default async function login({ request }) {
 
   const API_URL = import.meta.env.VITE_API_URL;
 
-  const response = await fetch(`${API_URL}/auth/login`, {
+  const response = await fetch(`${API_URL}/auth/delete-account-request`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
