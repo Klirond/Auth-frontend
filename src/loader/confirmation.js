@@ -13,7 +13,8 @@ export default function confirmation({ request }) {
     code.length !== 6 ||
     (redirectionPage !== "login" &&
       redirectionPage !== "reset" &&
-      redirectionPage !== "logout-all")
+      redirectionPage !== "logout-all" &&
+      redirectionPage !== "delete-account")
   ) {
     return {
       messageTitle: "An error occured",
@@ -27,12 +28,14 @@ export default function confirmation({ request }) {
     API_LINK = "verify";
   } else if (redirectionPage === "reset") {
     API_LINK = "reset-password-token";
+  } else if (redirectionPage === "delete-account") {
+    API_LINK = "delete-account";
   } else {
     API_LINK = "logout-all";
   }
 
   return fetch(`${API_URL}/auth/${API_LINK}`, {
-    method: "POST",
+    method: redirectionPage === "delete-account" ? "DELETE" : "POST",
     headers: {
       "Content-Type": "application/json",
     },
