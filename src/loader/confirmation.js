@@ -21,8 +21,7 @@ export default function confirmation({ request }) {
     };
   }
 
-  let API_LINK =
-    redirectionPage === "login" ? "verify" : "reset-password-token";
+  let API_LINK;
 
   if (redirectionPage === "login") {
     API_LINK = "verify";
@@ -47,7 +46,9 @@ export default function confirmation({ request }) {
       const messageTitle =
         result.status > 399 && result.status <= 599
           ? "An error occured"
-          : "You are going to be redirected";
+          : API_LINK === "logout-all"
+            ? "You can close this tab now"
+            : "You are going to be redirected";
 
       const messageText = result.message;
 
