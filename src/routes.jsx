@@ -20,6 +20,7 @@ import SentLogoutAllLink from "./pages/SentLogoutAllCode";
 import resendLogouAllCode from "./loader/resendLogoutAllCode";
 import DeleteAccount from "./pages/DeleteAccount";
 import deleteAccountRequest from "./actions/deleteAccountRequest";
+import SentDeleteAccountLink from "./pages/SentDeleteAccountCode";
 
 let router = createBrowserRouter([
   {
@@ -101,6 +102,14 @@ let router = createBrowserRouter([
         path: "delete-account",
         Component: DeleteAccount,
         action: deleteAccountRequest,
+      },
+      {
+        path: "delete-account-sent",
+        Component: SentDeleteAccountLink,
+      },
+      {
+        path: "delete-account-resend",
+        loader: () => {},
       },
       {
         path: "error",
